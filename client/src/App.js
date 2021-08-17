@@ -11,7 +11,7 @@ class App extends React.Component {
     // fetch Todo items from database and save them to state
   }
 
-  // TODO: Create components as needed to
+  // TODO: Create components as needed to create Todo List
 
   render() {
     return (
