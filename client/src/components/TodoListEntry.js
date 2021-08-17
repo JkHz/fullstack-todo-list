@@ -6,12 +6,11 @@ class TodoListEntry extends React.Component {
     super(props);
 
     this.state = {
-      completed: false
+      completed: this.props.todo.completed
     }
 
     this.deleteTodo = this.deleteTodo.bind(this);
     this.updateTodo = this.updateTodo.bind(this);
-    this.toggleCompleted = this.toggleCompleted.bind(this);
   }
 
   deleteTodo(id) {
@@ -29,12 +28,6 @@ class TodoListEntry extends React.Component {
       .catch(err => console.error(err))
     })
   }
-
-  toggleCompleted() {
-    this.setState({ completed: !this.state.completed })
-  }
-
-
 
   render() {
     return (
