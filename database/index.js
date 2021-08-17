@@ -1,7 +1,15 @@
 const mongoose = require('mongoose');
 
-// TODO:
-//   1. Establish database connection
-//   2. Create schema for Todo List item
-//   3. Create 'Todo' Model from schema
-//   4. Export Model from this file
+mongoose.connect('mongodb://localhost:27017/todoList', {useNewUrlParser: true, useUnifiedTopology: true});
+
+const todoSchema = mongoose.Schema({
+  item: String,
+  completed: {
+    type: Boolean,
+    default: false
+  }
+});
+
+const Todo = mongoose.model('todo', todoSchema);
+
+module.exports = Todo;
