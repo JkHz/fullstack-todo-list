@@ -12,7 +12,7 @@ const dbHelpers = {
 
   post: async (todo) => {
     try {
-      let newTodo = await Todo.create(todo);
+      let newTodo = Todo.create(todo);
       return newTodo;
     } catch(err) {
       return err;

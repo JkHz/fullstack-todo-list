@@ -1,8 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import TodoList from './components/TodoList';
-
-
 class App extends React.Component {
   constructor(props) {
     super(props);

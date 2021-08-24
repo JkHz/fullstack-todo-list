@@ -32,7 +32,7 @@ class TodoListEntry extends React.Component {
   render() {
     return (
       <div style={{textDecoration: this.props.todo.completed ? 'line-through' : 'none'}}>
-       • {this.props.todo.item}
+       • {this.props.todo.item} <br></br>
        <button onClick={() => this.updateTodo(this.props.todo._id)}>Mark as complete</button>
        <button onClick={() => this.deleteTodo(this.props.todo._id)}>Delete</button>
       </div>
